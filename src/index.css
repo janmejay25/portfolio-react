@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --color-space-dark: #0a0a0f;
+  --color-saffron-neon: #ff9933;
+  --color-deep-orange: #ff4500;
+  --color-astrology-gold: #ffd700;
+  --color-glass-white: rgba(255, 255, 255, 0.1);
+  
+  --background-image-celestial-gradient: radial-gradient(circle at top, #1a1a2e 0%, #0a0a0f 100%);
+  
+  --shadow-neon-orange: 0 0 10px #ff9933, 0 0 20px #ff4500;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-space-dark);
+  color: #f3f4f6;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Custom Glassmorphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
