@@ -28,40 +28,72 @@ const Contact = () => {
           viewport={{ once: true }}
           className="glass p-8 md:p-10 rounded-3xl border-white/10 shadow-2xl text-left"
         >
-          <form className="space-y-6">
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="flex flex-col gap-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-gray-400 ml-1">Full Name</label>
-                <input 
-                  type="text" 
-                  placeholder="John Doe" 
-                  className="px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-saffron-neon transition-all placeholder:text-gray-600"
-                />
-              </div>
-              <div className="flex flex-col gap-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-gray-400 ml-1">Email Address</label>
-                <input 
-                  type="email" 
-                  placeholder="john@example.com" 
-                  className="px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-saffron-neon transition-all placeholder:text-gray-600"
-                />
-              </div>
-            </div>
-            <div className="flex flex-col gap-2">
-              <label className="text-xs font-bold uppercase tracking-widest text-gray-400 ml-1">Message</label>
-              <textarea 
-                rows="5" 
-                placeholder="Tell me about your project..." 
-                className="px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-saffron-neon transition-all placeholder:text-gray-600 resize-none"
-              ></textarea>
-            </div>
-            <button 
-              type="submit" 
-              className="w-full py-4 bg-saffron-neon text-black font-bold rounded-xl hover:bg-deep-orange transition-all shadow-neon-orange uppercase tracking-widest text-sm"
-            >
-              Send Message
-            </button>
-          </form>
+          
+<form
+  action="https://send.pageclip.co/puL4pCrfrzvBdJ1FNEJK3LAMT9Em0zur/kundli"
+  className="pageclip-form space-y-6"
+  method="post"
+>
+  <div className="grid md:grid-cols-2 gap-6">
+    <div className="flex flex-col gap-2">
+      <label
+        htmlFor="full-name"
+        className="text-xs font-bold uppercase tracking-widest text-gray-400 ml-1"
+      >
+        Full Name
+      </label>
+      <input
+        id="full-name"
+        type="text"
+        name="name"
+        placeholder="John Doe"
+        required
+        className="px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-saffron-neon transition-all placeholder:text-gray-600"
+      />
+    </div>
+
+    <div className="flex flex-col gap-2">
+      <label
+        htmlFor="email"
+        className="text-xs font-bold uppercase tracking-widest text-gray-400 ml-1"
+      >
+        Email Address
+      </label>
+      <input
+        id="email"
+        type="email"
+        name="email"
+        placeholder="john@example.com"
+        required
+        className="px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-saffron-neon transition-all placeholder:text-gray-600"
+      />
+    </div>
+  </div>
+
+  <div className="flex flex-col gap-2">
+    <label
+      htmlFor="message"
+      className="text-xs font-bold uppercase tracking-widest text-gray-400 ml-1"
+    >
+      Message
+    </label>
+    <textarea
+      id="message"
+      name="message"
+      rows={5}
+      placeholder="Tell me about your project..."
+      required
+      className="px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-saffron-neon transition-all placeholder:text-gray-600 resize-none"
+    />
+  </div>
+
+  <button
+    type="submit"
+    className="pageclip-form__submit w-full py-4 bg-saffron-neon text-black font-bold rounded-xl hover:bg-deep-orange transition-all shadow-neon-orange uppercase tracking-widest text-sm"
+  >
+    <span>Send Message</span>
+  </button>
+</form>
         </motion.div>
 
         {/* Right: Socials & Info */}
